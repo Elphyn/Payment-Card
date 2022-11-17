@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* font-family: 'Red Hat Display', sans-serif; */
+:root {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    --Pale_blue: hsl(225, 100%, 94%);
+    --Bright_blue: hsl(245, 75%, 52%);
+    --Bright_blue2: hsl(264, 79%, 63%);
+    --Very_pale_blue: hsl(225, 100%, 98%);
+    --Desaturated_blue: hsl(224, 23%, 55%);
+    --Dark_blue: hsl(223, 47%, 23%);
+    font-size: 16px;
+
+}
+
+.shadow {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+}
+
+.container {
+    width: 360px;
+    height: 560px;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.container > img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+.container-main {
+    padding: 0 2rem;
+    display: grid;
+}
+
+.description {
+    font-size: 16px;
+    opacity: 60%;
+    text-align: center;
+    margin: 1rem;
+}
+
+.price {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    background-color: var(--Very_pale_blue);
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+
+.plan {
+    padding: 0 1.5rem;
+    font-weight: 500;
+}
+
+.change {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    color: var(--Desaturated_blue);
+    transition: 200ms;
+    font-weight: 500;
+}
+
+.change:hover {
+    color: var(--Bright_blue2);
+    text-decoration: underline;
+}
+
+.payment {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 0.70rem;
+    border: none;
+    font-weight: 900;
+}
+
+.proceed {
+    color: white;
+    background-color: var(--Bright_blue);   
+    transition: 200ms;
+}
+
+.proceed:hover {
+    background-color: var(--Bright_blue2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.cancel {
+    background-color: transparent;
+    color: black;
+    opacity: 75%;
+    margin-top: 10px;
+    bottom: auto;
+}
+
+.cancel:hover {
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+        margin: 1.5rem 0;
+    }
+    
+}
